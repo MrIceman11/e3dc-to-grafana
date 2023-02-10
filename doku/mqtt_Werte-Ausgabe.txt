@@ -1,0 +1,187 @@
+solar:
+	power: e3dc/solar/power ## Watt die PV Anlage erzeugt
+	energy: e3dc/solar/energy ## KWh die PV Anlage pro Tag erzeugt
+
+home:
+	power: e3dc/home/power ## Watt das dass Haus verbraucht
+	energy: e3dc/home/energy ## KWh das das Haus pro Tag verbraucht
+
+grid:
+	power: e3dc/grid/power ## Watt die das Haus vom Netz bezieht oder ins Netz einspeist
+	energy:
+		e3dc/grid/energy/out ## KWh die das Haus vom Netz bezieht pro Tag
+		e3dc/grid/energy/in ## KWh die das Haus ins Netz einspeist pro Tag
+	
+pm:
+	power:
+		L1: e3dc/pm/power/L1 ## Fase 1 Watt in or out 
+		L2: e3dc/pm/power/L2 ## Fase 2 Watt in or out
+		L3: e3dc/pm/power/L3 ## Fase 3 Watt in or out
+	voltage:
+		L1: e3dc/pm/voltage/L1 ## Fase 1 Volt
+		L2:	e3dc/pm/voltage/L2 ## Fase 2 Volt
+		L3: e3dc/pm/voltage/L3 ## Fase 3 Volt
+	energy:
+		L1: e3dc/pm/energy/L1 ## i don't know
+		L2: e3dc/pm/energy/L2 ## i don't know
+		L3: e3dc/pm/energy/L3 ## i don't know
+	active_phases:
+		L1: e3dc/pm/active_phases/L1 ## Fase 1 ob aktiv
+		L2: e3dc/pm/active_phases/L3 ## Fase 3 ob aktiv
+	actice_phases:
+		L2: e3dc/pm/actice_phases/L2 ## Fase 3 ob aktiv
+
+pvi:
+	power:
+		string_2: e3dc/pvi/power/string_2 ## Watt die PV Anlage erzeugt auf String 2
+		string_1: e3dc/pvi/power/string_1 ## Watt die PV Anlage erzeugt auf String 1
+		L1: e3dc/pvi/power/L1 ## i don´t know
+		L2: e3dc/pvi/power/L2 ## i don´t know
+		L3: e3dc/pvi/power/L3 ## i don´t know
+	voltage:
+		string_2: e3dc/pvi/voltage/string_2 ## Volt auf String 2
+		L2: e3dc/pvi/voltage/L2 ## i don´t know
+		string_1: e3dc/pvi/voltage/string_1 ## Volt auf String 1
+		L1: e3dc/pvi/voltage/L1 ## i don´t know
+		L3: e3dc/pvi/voltage/L3 ## i don´t know
+	current:
+		string_1: e3dc/pvi/current/string_1 ## KW auf String 1
+		string_2: e3dc/pvi/current/string_2 ## KW auf String 2
+		L1: e3dc/pvi/current/L1
+		L2: e3dc/pvi/current/L2
+		L3: e3dc/pvi/current/L3
+	on_grid: e3dc/pvi/on_grid ## ob die PV Anlage auf dem Netz ist
+
+system:
+	software: e3dc/system/software ## Software Version
+	production_date: e3dc/system/production_date ## Datum der Herstellung
+	serial_number: e3dc/system/serial_number ## Seriennummer
+	installed_peak_power: e3dc/system/installed_peak_power ## installierte Leistung
+	derate_at_percent_value: e3dc/system/derate_at_percent_value ## i don´t know
+	derate_at_power_value: e3dc/system/derate_at_power_value ## i don´t know
+
+time:
+	zone: e3dc/time/zone ## Zeitzone
+
+battery:
+	energy:
+		charge: e3dc/battery/energy/charge ## KWh die die Batterie pro Tag geladen hat
+		discharge: e3dc/battery/energy/discharge ## KWh die die Batterie pro Tag entladen hat
+	power: e3dc/battery/power ## Watt die die Batterie entlädt oder lädt
+	rsoc: e3dc/battery/rsoc ## Restladung in %
+	voltage: e3dc/battery/voltage ## Volt der Batterie
+	current: e3dc/battery/current ## KW der Batterie
+	cycles: e3dc/battery/cycles ## Anzahl der Ladezyklen
+	status: e3dc/battery/status ## Status der Batterie
+	error: e3dc/battery/error ## Fehler der Batterie
+	name: e3dc/battery/name ## Name der Batterie
+	dcb_count: e3dc/battery/dcb_count ## Anzahl der DCB
+	training: e3dc/battery/training ## Batterie wird trainiert
+	soc: e3dc/battery/soc ## Ladung in %
+
+addon:
+	power: e3dc/addon/power ## Watt die das Addon verbraucht
+
+ems:
+	balanced_phases: 
+		L1: e3dc/ems/balanced_phases/L1 ## ob Fase 1 aktiv ist
+		L2: e3dc/ems/balanced_phases/L2 ## ob Fase 2 aktiv ist
+		L3: e3dc/ems/balanced_phases/L3 ## ob Fase 3 aktiv ist
+	max_charge:
+		power: e3dc/ems/max_charge/power ## Maximaler Ladeleistung
+	max_discharge: 
+		power: e3dc/ems/max_discharge/power ## Maximaler Entladeleistung
+	discharge_start:
+		power: e3dc/ems/discharge_start/power ## Minimaler Entladeleistung
+		
+	charging_lock: e3dc/ems/charging_lock ## ob die Batterie geladen werden darf
+	discharging_lock: e3dc/ems/discharging_lock ## ob die Batterie entladen werden darf
+	emergency_power_available: e3dc/ems/emergency_power_available ## ob die Batterie im Notfall genutzt werden darf
+	charging_throttled: e3dc/ems/charging_throttled ## ob die Batterie geladen werden darf
+	charging_time_lock: e3dc/ems/charging_time_lock ## ob die Batterie geladen werden darf
+	discharging_time_lock: e3dc/ems/discharging_time_lock ## ob die Batterie entladen werden darf
+	power_limits: e3dc/ems/power_limits ## ob die Batterie geladen oder entladen werden darf
+	power_save: e3dc/ems/power_save ## ob die Batterie im Notfall genutzt werden darf
+	weather_regulation: e3dc/ems/weather_regulation ## ob das System Wetter gestuert ist
+	
+coupling:
+	mode: e3dc/coupling/mode ## ob das System gekoppelt ist
+
+reserve:
+	percent: e3dc/reserve/percent  ## Prozent der Reserve
+	energy: e3dc/reserve/energy ## KWh der Reserve
+	max: e3dc/reserve/max ## Maximaler Wert der Reserve
+	last_soc: e3dc/reserve/last_soc ## Letzte Ladung in %
+
+yesterday:
+	battery:
+		energy:
+			charge: e3dc/yesterday/battery/energy/charge ## KWh die die Batterie gestern geladen hat
+			discharge: e3dc/yesterday/battery/energy/discharge ## KWh die die Batterie gestern entladen hat
+		soc: e3dc/yesterday/battery/soc ## Ladung in % gestern
+	solar:
+		energy: e3dc/yesterday/solar/energy ## KWh die die PV Anlage gestern erzeugt hat
+	grid:
+		energy:
+			in: e3dc/yesterday/grid/energy/in ## KWh die die PV Anlage gestern ins Netz eingespeist hat
+			out: e3dc/yesterday/grid/energy/out ## KWh die die PV Anlage gestern aus dem Netz bezogen hat
+	home:
+		energy: e3dc/yesterday/home/energy ## KWh die die PV Anlage gestern ins Haus eingespeist hat
+	consumed: e3dc/yesterday/consumed ## KWh die das Haus gestern verbraucht hat
+	autarky: e3dc/yesterday/autarky ## Prozent der Autarkie gestern
+
+week:
+	battery:
+		energy:
+			charge: e3dc/week/battery/energy/charge ## KWh die die Batterie diese Woche geladen hat
+			discharge: e3dc/week/battery/energy/discharge ## KWh die die Batterie diese Woche entladen hat
+		soc: e3dc/week/battery/soc ## Ladung in % diese Woche
+	solar:
+		energy: e3dc/week/solar/energy ## KWh die die PV Anlage diese Woche erzeugt hat
+	grid:
+		energy:
+			in: e3dc/week/grid/energy/in ## KWh die die PV Anlage diese Woche ins Netz eingespeist hat
+			out: e3dc/week/grid/energy/out ## KWh die die PV Anlage diese Woche aus dem Netz bezogen hat
+	home:
+		energy: e3dc/week/home/energy ## KWh die die PV Anlage diese Woche ins Haus eingespeist hat
+	consumed: e3dc/week/consumed ## KWh die das Haus diese Woche verbraucht hat
+	autarky: e3dc/week/autarky ## Prozent der Autarkie diese Woche
+
+month:
+	battery:
+		energy:
+			charge: e3dc/month/battery/energy/charge ## KWh die die Batterie diesen Monat geladen hat
+			discharge: e3dc/month/battery/energy/discharge ## KWh die die Batterie diesen Monat entladen hat
+		soc: e3dc/month/battery/soc ## Ladung in % diesen Monat
+	solar:
+		energy: e3dc/month/solar/energy ## KWh die die PV Anlage diesen Monat erzeugt hat
+	grid:
+		energy: 
+			in: e3dc/month/grid/energy/in ## KWh die die PV Anlage diesen Monat ins Netz eingespeist hat
+			out: e3dc/month/grid/energy/out ## KWh die die PV Anlage diesen Monat aus dem Netz bezogen hat
+	home:
+		energy: e3dc/month/home/energy ## KWh die die PV Anlage diesen Monat ins Haus eingespeist hat
+	consumed: e3dc/month/consumed ## KWh die das Haus diesen Monat verbraucht hat
+	autarky: e3dc/month/autarky ## Prozent der Autarkie diesen Monat
+
+year:
+	battery:
+		energy:
+			charge: e3dc/year/battery/energy/charge ## KWh die die Batterie dieses Jahr geladen hat
+			discharge: e3dc/year/battery/energy/discharge ## KWh die die Batterie dieses Jahr entladen hat
+		soc: e3dc/year/battery/soc ## Ladung in % dieses Jahr
+	solar:
+		energy: e3dc/year/solar/energy ## KWh die die PV Anlage dieses Jahr erzeugt hat
+	grid:
+		energy:
+			in: e3dc/year/grid/energy/in ## KWh die die PV Anlage dieses Jahr ins Netz eingespeist hat
+			out: e3dc/year/grid/energy/out ## KWh die die PV Anlage dieses Jahr aus dem Netz bezogen hat
+	home:
+		energy: e3dc/year/home/energy ## KWh die die PV Anlage dieses Jahr ins Haus eingespeist hat
+	consumed: e3dc/year/consumed ## KWh die das Haus dieses Jahr verbraucht hat
+	autarky: e3dc/year/autarky ## Prozent der Autarkie dieses Jahr
+
+grid_in_limit: e3dc/grid_in_limit ## Maximaler Einspeiseleistung
+mode: e3dc/mode ## Betriebsmodus
+consumed: e3dc/consumed ## Verbrauch
+autarky: e3dc/autarky ## Autarkie in %
