@@ -1,0 +1,987 @@
+[
+    {
+        "id": "de92758c9cc2654e",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "829688ed348b7912",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "Watt die PV Anlage erzeugt",
+        "topic": "e3dc/solar/power",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 140,
+        "wires": [
+            [
+                "fb97b6fcf6d0a098"
+            ]
+        ]
+    },
+    {
+        "id": "a86289e9a56f2ea6",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "Watt das dass Haus verbraucht",
+        "topic": "e3dc/home/power",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 220,
+        "wires": [
+            [
+                "7c2c3322da86e3e0"
+            ]
+        ]
+    },
+    {
+        "id": "649d488e57e81f76",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "KWh die PV Anlage pro Tag erzeugt",
+        "topic": "e3dc/solar/energy",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 280,
+        "y": 180,
+        "wires": [
+            [
+                "f5f8930206c7afff"
+            ]
+        ]
+    },
+    {
+        "id": "659dd53b7a702492",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "KWh das das Haus pro Tag verbraucht",
+        "topic": "e3dc/home/energy",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 260,
+        "wires": [
+            [
+                "38cb818611fdfdc4"
+            ]
+        ]
+    },
+    {
+        "id": "6c66845e158f03f1",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "Watt die das Haus vom Netz bezieht oder ins Netz einspeist",
+        "topic": "e3dc/grid/power",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 360,
+        "y": 300,
+        "wires": [
+            [
+                "03ac798cdc249098"
+            ]
+        ]
+    },
+    {
+        "id": "f65b693a65d159b0",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "KWh die das Haus vom Netz bezieht pro Tag",
+        "topic": "e3dc/grid/energy/out",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 310,
+        "y": 340,
+        "wires": [
+            [
+                "fcc553781a291048"
+            ]
+        ]
+    },
+    {
+        "id": "17e26b90b46cde0e",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "KWh die das Haus ins Netz einspeist pro Tag",
+        "topic": "e3dc/grid/energy/in",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 310,
+        "y": 380,
+        "wires": [
+            [
+                "ef48fcf0bce6900b"
+            ]
+        ]
+    },
+    {
+        "id": "62b07fa4581feb1d",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "Watt die PV Anlage erzeugt auf String 2",
+        "topic": "e3dc/pvi/power/string_2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 420,
+        "wires": [
+            [
+                "bd4ef5c2d4961fdf"
+            ]
+        ]
+    },
+    {
+        "id": "760229c082b4b8b8",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "Watt die PV Anlage erzeugt auf String 1",
+        "topic": "e3dc/pvi/power/string_1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 460,
+        "wires": [
+            [
+                "c052ce63f35e8f9f"
+            ]
+        ]
+    },
+    {
+        "id": "deefbb377d80ee50",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "Volt auf String 2",
+        "topic": "e3dc/pvi/voltage/string_2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 500,
+        "wires": [
+            [
+                "5492ca32003f0369"
+            ]
+        ]
+    },
+    {
+        "id": "f4dfcab4b86ce985",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "Volt auf String 1",
+        "topic": "e3dc/pvi/voltage/string_1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 540,
+        "wires": [
+            [
+                "20058edceafa9aeb"
+            ]
+        ]
+    },
+    {
+        "id": "6227d16c98e43eff",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "KW auf String 1",
+        "topic": "e3dc/pvi/current/string_1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 580,
+        "wires": [
+            [
+                "044b0af666d73a37"
+            ]
+        ]
+    },
+    {
+        "id": "fd2c185145101228",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "KW auf String 2",
+        "topic": "e3dc/pvi/current/string_2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 620,
+        "wires": [
+            [
+                "91121a9ea87ce0aa"
+            ]
+        ]
+    },
+    {
+        "id": "d0f4983fb9c5a2c7",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "ob die PV Anlage auf dem Netz ist",
+        "topic": "e3dc/pvi/on_grid",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 280,
+        "y": 660,
+        "wires": [
+            [
+                "2046e94ac200f10f"
+            ]
+        ]
+    },
+    {
+        "id": "bd3ec4205b5ce67a",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "KWh die die Batterie pro Tag geladen hat",
+        "topic": "e3dc/battery/energy/charge",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 700,
+        "wires": [
+            [
+                "d6bec3704c3625a4"
+            ]
+        ]
+    },
+    {
+        "id": "e6c0c0cd127144e4",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "KWh die die Batterie pro Tag entladen hat",
+        "topic": "e3dc/battery/energy/discharge",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 740,
+        "wires": [
+            [
+                "b7dda4254d785bbe"
+            ]
+        ]
+    },
+    {
+        "id": "81bdf318101b9d4f",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "Restladung in %",
+        "topic": "e3dc/battery/rsoc",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 780,
+        "wires": [
+            [
+                "b35cc59678ad51b0"
+            ]
+        ]
+    },
+    {
+        "id": "9a7545abe638cc9a",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "Anzahl der Ladezyklen",
+        "topic": "e3dc/battery/cycles",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 820,
+        "wires": [
+            [
+                "1b71a9819a712494"
+            ]
+        ]
+    },
+    {
+        "id": "27ee0452541f6ef7",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "Ladung in %",
+        "topic": "e3dc/battery/soc",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 860,
+        "wires": [
+            [
+                "3108213745d63141"
+            ]
+        ]
+    },
+    {
+        "id": "b73b8fbddc4b49d0",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "Prozent der Reserve",
+        "topic": "e3dc/reserve/percent",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 900,
+        "wires": [
+            [
+                "3acf932db459d207"
+            ]
+        ]
+    },
+    {
+        "id": "3f60753fbfec5fe4",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "KWh der Reserve",
+        "topic": "e3dc/reserve/energy",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 940,
+        "wires": [
+            [
+                "6fa733d8bf8e4afa"
+            ]
+        ]
+    },
+    {
+        "id": "b6d778bd8ac546e0",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "Letzte Ladung in % der Reserve",
+        "topic": "e3dc/reserve/last_soc",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 980,
+        "wires": [
+            [
+                "ec851a2c10b7f97d"
+            ]
+        ]
+    },
+    {
+        "id": "85a08133ccf7b5a4",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "Autarkie in %",
+        "topic": "e3dc/autarky",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 1020,
+        "wires": [
+            [
+                "6f386f899fbeae6f"
+            ]
+        ]
+    },
+    {
+        "id": "3dd8b25a161a495f",
+        "type": "mqtt in",
+        "z": "de92758c9cc2654e",
+        "name": "Verbrauch",
+        "topic": "e3dc/consumed",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5dde31eab10ed31e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 1060,
+        "wires": [
+            [
+                "9d880319f290853f"
+            ]
+        ]
+    },
+    {
+        "id": "fb97b6fcf6d0a098",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/solar/power",
+        "measurement": "e3dc/solar/power",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 750,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "f5f8930206c7afff",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/solar/energy",
+        "measurement": "e3dc/solar/energy",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 750,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "7c2c3322da86e3e0",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/home/power",
+        "measurement": "e3dc/home/power",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 750,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "38cb818611fdfdc4",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/home/energy",
+        "measurement": "e3dc/home/energy",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 750,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "03ac798cdc249098",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/grid/power",
+        "measurement": "e3dc/grid/power",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 750,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "fcc553781a291048",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/grid/energy/out",
+        "measurement": "e3dc/grid/energy/out",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 760,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "ef48fcf0bce6900b",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/grid/energy/in",
+        "measurement": "e3dc/grid/energy/in",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 750,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "bd4ef5c2d4961fdf",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/pvi/power/string_2",
+        "measurement": "e3dc/pvi/power/string_2",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 770,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "c052ce63f35e8f9f",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/pvi/power/string_1",
+        "measurement": "e3dc/pvi/power/string_1",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 770,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "5492ca32003f0369",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/pvi/voltage/string_2",
+        "measurement": "e3dc/pvi/voltage/string_2",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 770,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "20058edceafa9aeb",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/pvi/voltage/string_1",
+        "measurement": "e3dc/pvi/voltage/string_1",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 770,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "044b0af666d73a37",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/pvi/current/string_1",
+        "measurement": "e3dc/pvi/current/string_1",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 770,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "91121a9ea87ce0aa",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/pvi/current/string_2",
+        "measurement": "e3dc/pvi/current/string_2",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 770,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "2046e94ac200f10f",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/pvi/on_grid",
+        "measurement": "e3dc/pvi/on_grid",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 750,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "d6bec3704c3625a4",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/battery/energy/charge",
+        "measurement": "e3dc/battery/energy/charge",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 780,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "b7dda4254d785bbe",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/battery/energy/discharge",
+        "measurement": "e3dc/battery/energy/discharge",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 790,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "b35cc59678ad51b0",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/battery/rsoc",
+        "measurement": "e3dc/battery/rsoc",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 750,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "1b71a9819a712494",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/battery/cycles",
+        "measurement": "e3dc/battery/cycles",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 760,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "3108213745d63141",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/battery/soc",
+        "measurement": "e3dc/battery/soc",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 750,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "3acf932db459d207",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/reserve/percent",
+        "measurement": "e3dc/reserve/percent",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 760,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "6fa733d8bf8e4afa",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/reserve/energy",
+        "measurement": "e3dc/reserve/energy",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 760,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "ec851a2c10b7f97d",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/reserve/last_soc",
+        "measurement": "e3dc/reserve/last_soc",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 760,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "6f386f899fbeae6f",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/autarky",
+        "measurement": "e3dc/autarky",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 730,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "9d880319f290853f",
+        "type": "influxdb out",
+        "z": "de92758c9cc2654e",
+        "influxdb": "ae328444a2d2e2a9",
+        "name": "e3dc/consumed",
+        "measurement": "e3dc/consumed",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "pv",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 740,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "5dde31eab10ed31e",
+        "type": "mqtt-broker",
+        "name": "PV-MQTT",
+        "broker": "192.168.10.16",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ae328444a2d2e2a9",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "PV-Influx",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.8-flux",
+        "url": "http://172.17.0.6:8086",
+        "rejectUnauthorized": false
+    }
+]
