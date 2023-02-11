@@ -947,7 +947,7 @@
         "id": "5dde31eab10ed31e",
         "type": "mqtt-broker",
         "name": "PV-MQTT",
-        "broker": "192.168.10.16",
+        "broker": "0.0.0.0",
         "port": "1883",
         "clientid": "",
         "autoConnect": true,
@@ -981,7 +981,7 @@
         "usetls": false,
         "tls": "",
         "influxdbVersion": "1.8-flux",
-        "url": "http://172.17.0.6:8086",
+        "url": "http://0.0.0.0:8086",
         "rejectUnauthorized": false
     }
 ]
