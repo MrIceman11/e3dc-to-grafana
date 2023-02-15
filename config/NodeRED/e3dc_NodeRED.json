@@ -2,7 +2,7 @@
     {
         "id": "de92758c9cc2654e",
         "type": "tab",
-        "label": "Flow 2",
+        "label": "mqtt to influxdb",
         "disabled": false,
         "info": "",
         "env": []
@@ -281,27 +281,6 @@
         ]
     },
     {
-        "id": "d0f4983fb9c5a2c7",
-        "type": "mqtt in",
-        "z": "de92758c9cc2654e",
-        "name": "ob die PV Anlage auf dem Netz ist",
-        "topic": "e3dc/pvi/on_grid",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "5dde31eab10ed31e",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 280,
-        "y": 660,
-        "wires": [
-            [
-                "2046e94ac200f10f"
-            ]
-        ]
-    },
-    {
         "id": "bd3ec4205b5ce67a",
         "type": "mqtt in",
         "z": "de92758c9cc2654e",
@@ -315,7 +294,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 300,
-        "y": 700,
+        "y": 660,
         "wires": [
             [
                 "d6bec3704c3625a4"
@@ -336,7 +315,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 300,
-        "y": 740,
+        "y": 700,
         "wires": [
             [
                 "b7dda4254d785bbe"
@@ -357,7 +336,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 220,
-        "y": 780,
+        "y": 740,
         "wires": [
             [
                 "b35cc59678ad51b0"
@@ -378,7 +357,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 240,
-        "y": 820,
+        "y": 780,
         "wires": [
             [
                 "1b71a9819a712494"
@@ -399,7 +378,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 210,
-        "y": 860,
+        "y": 820,
         "wires": [
             [
                 "3108213745d63141"
@@ -420,7 +399,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 230,
-        "y": 900,
+        "y": 860,
         "wires": [
             [
                 "3acf932db459d207"
@@ -441,7 +420,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 220,
-        "y": 940,
+        "y": 900,
         "wires": [
             [
                 "6fa733d8bf8e4afa"
@@ -462,7 +441,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 270,
-        "y": 980,
+        "y": 940,
         "wires": [
             [
                 "ec851a2c10b7f97d"
@@ -483,7 +462,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 210,
-        "y": 1020,
+        "y": 980,
         "wires": [
             [
                 "6f386f899fbeae6f"
@@ -504,7 +483,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 200,
-        "y": 1060,
+        "y": 1020,
         "wires": [
             [
                 "9d880319f290853f"
@@ -520,7 +499,7 @@
         "measurement": "e3dc/solar/power",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
@@ -538,7 +517,7 @@
         "measurement": "e3dc/solar/energy",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
@@ -556,7 +535,7 @@
         "measurement": "e3dc/home/power",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
@@ -574,7 +553,7 @@
         "measurement": "e3dc/home/energy",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
@@ -592,7 +571,7 @@
         "measurement": "e3dc/grid/power",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
@@ -610,7 +589,7 @@
         "measurement": "e3dc/grid/energy/out",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
@@ -628,7 +607,7 @@
         "measurement": "e3dc/grid/energy/in",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
@@ -646,7 +625,7 @@
         "measurement": "e3dc/pvi/power/string_2",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
@@ -664,7 +643,7 @@
         "measurement": "e3dc/pvi/power/string_1",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
@@ -682,7 +661,7 @@
         "measurement": "e3dc/pvi/voltage/string_2",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
@@ -700,7 +679,7 @@
         "measurement": "e3dc/pvi/voltage/string_1",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
@@ -718,7 +697,7 @@
         "measurement": "e3dc/pvi/current/string_1",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
@@ -736,31 +715,13 @@
         "measurement": "e3dc/pvi/current/string_2",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
         "x": 770,
         "y": 620,
-        "wires": []
-    },
-    {
-        "id": "2046e94ac200f10f",
-        "type": "influxdb out",
-        "z": "de92758c9cc2654e",
-        "influxdb": "ae328444a2d2e2a9",
-        "name": "e3dc/pvi/on_grid",
-        "measurement": "e3dc/pvi/on_grid",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "pv",
-        "precisionV18FluxV20": "s",
-        "retentionPolicyV18Flux": "",
-        "org": "organisation",
-        "bucket": "bucket",
-        "x": 750,
-        "y": 660,
         "wires": []
     },
     {
@@ -772,13 +733,13 @@
         "measurement": "e3dc/battery/energy/charge",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
         "x": 780,
-        "y": 700,
+        "y": 660,
         "wires": []
     },
     {
@@ -790,13 +751,13 @@
         "measurement": "e3dc/battery/energy/discharge",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
         "x": 790,
-        "y": 740,
+        "y": 700,
         "wires": []
     },
     {
@@ -808,13 +769,13 @@
         "measurement": "e3dc/battery/rsoc",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
         "x": 750,
-        "y": 780,
+        "y": 740,
         "wires": []
     },
     {
@@ -826,13 +787,13 @@
         "measurement": "e3dc/battery/cycles",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
         "x": 760,
-        "y": 820,
+        "y": 780,
         "wires": []
     },
     {
@@ -844,13 +805,13 @@
         "measurement": "e3dc/battery/soc",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
         "x": 750,
-        "y": 860,
+        "y": 820,
         "wires": []
     },
     {
@@ -862,13 +823,13 @@
         "measurement": "e3dc/reserve/percent",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
         "x": 760,
-        "y": 900,
+        "y": 860,
         "wires": []
     },
     {
@@ -880,13 +841,13 @@
         "measurement": "e3dc/reserve/energy",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
         "x": 760,
-        "y": 940,
+        "y": 900,
         "wires": []
     },
     {
@@ -898,13 +859,13 @@
         "measurement": "e3dc/reserve/last_soc",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
         "x": 760,
-        "y": 980,
+        "y": 940,
         "wires": []
     },
     {
@@ -916,13 +877,13 @@
         "measurement": "e3dc/autarky",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
         "x": 730,
-        "y": 1020,
+        "y": 980,
         "wires": []
     },
     {
@@ -934,20 +895,20 @@
         "measurement": "e3dc/consumed",
         "precision": "",
         "retentionPolicy": "",
-        "database": "pv",
+        "database": "e3dc",
         "precisionV18FluxV20": "s",
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
         "x": 740,
-        "y": 1060,
+        "y": 1020,
         "wires": []
     },
     {
         "id": "5dde31eab10ed31e",
         "type": "mqtt-broker",
         "name": "PV-MQTT",
-        "broker": "0.0.0.0",
+        "broker": "your-mqtt-server",
         "port": "1883",
         "clientid": "",
         "autoConnect": true,
@@ -981,7 +942,7 @@
         "usetls": false,
         "tls": "",
         "influxdbVersion": "1.8-flux",
-        "url": "http://0.0.0.0:8086",
+        "url": "yourinfluxdbserver",
         "rejectUnauthorized": false
     }
 ]
