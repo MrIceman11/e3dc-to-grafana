@@ -1,3 +1,5 @@
+# Das Repository ist derzeit noch in der Beta!
+
 # e3dc-to-grafana
 Dies ist meine Dokumentation/Lösung wie ich die Daten von meinem e3dc Hausgraftwerk in ein Grafana-Dashboard anzeige. Dazu verwende ich das fertige Script von [pvtom](https://github.com/pvtom/rscp2mqtt). In meinem fall lese ich die Daten von einem e3dc X10 Speichers aus, welches super funktioniert.
 Hier ein Schaubild wie die Datenflüsse sind:
